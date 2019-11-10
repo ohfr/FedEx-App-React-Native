@@ -25,17 +25,15 @@ import {
 } from 'react-native/Libraries/NewAppScreen';
 
 import { NativeRouter, Route, Link } from 'react-router-native';
+import Zip from './Components/Zip';
+import Home from './Components/Home';
 
 const App = () => {
   return (
     <NativeRouter>
       <View style={styles.container}>
-        <Link to="/Zip" style={styles.buttons}>
-          <Text style={styles.buttonText}>Search By Zip</Text>
-        </Link>
-        <Link to="/City" style={styles.buttons}>
-          <Text style={styles.buttonText}>Search By City</Text>
-        </Link>
+        <Route exact path="/" component={Home} />
+        <Route exact path="/Zip" component={Zip} />
       </View>
     </NativeRouter>
       
@@ -50,7 +48,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     // flexWrap: 'wrap',
     justifyContent: 'center',
-    
+
   },
   buttons: {
     marginTop: 20,
