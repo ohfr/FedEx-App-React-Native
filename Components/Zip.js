@@ -12,6 +12,7 @@ const Zip = (props) => {
             api().get(`/zips/${search}`)
                 .then(res => {
                     setData(res.data)
+                    setSearch();
                 })
                 .catch(err => console.log("Error on api"))
         }
@@ -20,7 +21,6 @@ const Zip = (props) => {
     const handleSubmit = (e) => {
         e.preventDefault();
         setRefresh(!refresh);
-        setSearch();
     }
     return (
         <View style={styles.container}>
@@ -54,6 +54,5 @@ const styles = StyleSheet.create({
     },
     data: {
         fontSize: 30,
-
     }
 })
