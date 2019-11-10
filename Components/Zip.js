@@ -25,7 +25,7 @@ const Zip = (props) => {
     return (
         <View style={styles.container}>
             <TextInput placeholder="Zip Code" value={search} onChangeText={(text) => setSearch(text)} style={styles.input} />
-            <Button title="Submit" style={styles.button} onClick={handleSubmit} />
+            <Button title="Submit" style={styles.button} onPress={handleSubmit} />
             {data && (  
             <View>
                 <Text style={styles.data}>{data.city}</Text> 

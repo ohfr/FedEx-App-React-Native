@@ -37,7 +37,7 @@ const Add = (props) => {
 
             <TextInput placeholder="Delivery" value={data.delivery} onChangeText={(text) => setData({...data, text})} />
 
-            <Button title="Submit" onClick={handleSubmit} />
+            <Button title="Submit" onPress={handleSubmit} />
             
             {success && <Text style={styles.texts}>Successfully added</Text>}
         </View>
