@@ -1,10 +1,3 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow
- */
 
 import React from 'react';
 import {
@@ -16,17 +9,11 @@ import {
   StatusBar,
 } from 'react-native';
 
-import {
-  Header,
-  LearnMoreLinks,
-  Colors,
-  DebugInstructions,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
 
 import { NativeRouter, Route, Link } from 'react-router-native';
 import Zip from './Components/Zip';
 import Home from './Components/Home';
+import City from './Components/City';
 
 const App = () => {
   return (
@@ -34,6 +21,7 @@ const App = () => {
       <View style={styles.container}>
         <Route exact path="/" component={Home} />
         <Route exact path="/Zip" component={Zip} />
+        <Route exact path="/City" component={City} />
       </View>
     </NativeRouter>
       
