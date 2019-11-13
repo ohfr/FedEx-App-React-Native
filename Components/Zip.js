@@ -9,6 +9,7 @@ const Zip = (props) => {
     const [refresh, setRefresh] = useState(false);
     const [spinner, setSpinner] = useState(false);
     const [error, setError] = useState();
+    
     useEffect(() => {
         if (search) {
             api().get(`/zips/${search}`)
@@ -16,6 +17,7 @@ const Zip = (props) => {
                     setData(res.data)
                     setSearch();
                     setSpinner(!spinner)
+                    console.log(res)
                 })
                 .catch(err => setError("Could not find zip code"))
         }
